@@ -20,6 +20,8 @@
   "dependencies": {
     "@aws-cdk/core": "1.132.0",
     "@serverless-stack/cli": "0.56.2",
-    "@serverless-stack/resources": "0.56.2"
+    "@serverless-stack/resources": "0.56.2",
+    "aws-sdk": "^2.1050.0",
+    "uuid": "^7.0.3"
   }
 }
