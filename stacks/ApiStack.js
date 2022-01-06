@@ -9,6 +9,8 @@ export default class ApiStack extends sst.Stack {
     const { table } = props; // props에서 기존에 생성했던 StorageStack의 table 사용가능
 
     this.api = new sst.Api(this, "Api", {
+      // 모든 라우트에 대해서 AWS_IAM을 통한다..
+      defaultAuthorizationType: "AWS_IAM",
       // Api 생성
       defaultFunctionProps: {
         environment: {

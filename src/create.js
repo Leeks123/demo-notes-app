@@ -8,7 +8,8 @@ export const main = handler(async (event) => {
   const params = {
     TableName: process.env.TABLE_NAME,
     Item: {
-      userId: "123",
+      // cognito identity pool에 등록된 유저 아이디
+      userId: event.requestContext.authorizer.iam.cognitoIdentity.identityId,
       noteId: uuid.v1(),
       content: data.content, // note의 내용이 들어가는 곳..
       attachment: data.attachment,
